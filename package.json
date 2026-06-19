@@ -1,0 +1,24 @@
+{
+  "name": "projeto-de-automacao-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luan0liveiraostrindade-collab/Projeto-de-automacao-UI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/luan0liveiraostrindade-collab/Projeto-de-automacao-UI/issues"
+  },
+  "homepage": "https://github.com/luan0liveiraostrindade-collab/Projeto-de-automacao-UI#readme",
+  "dependencies": {
+    "cypress": "^15.17.0"
+  }
+}
