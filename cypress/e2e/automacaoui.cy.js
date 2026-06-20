@@ -1,4 +1,8 @@
-describe('Funcionalidade: login', () => {
+/// <reference types="cypress" /> 
+
+import { faker } from '@faker-js/faker';
+
+describe('Funcionalidade: login/ Massa de dados fake', () => {
 
     beforeEach(() => {
         cy.visit('login.html')
@@ -44,10 +48,36 @@ describe('Funcionalidade: login', () => {
 
     //Massa de dados fake
 
+    it('Não deve efetuar login com credenciais aleatórias', () => {
 
+        const usuarioFake = {
+            email: faker.internet.email(),
+            senha: faker.internet.password()
+        };
 
+        cy.log(`Email: ${usuarioFake.email}`);
+        cy.log(`Senha: ${usuarioFake.senha}`);
 
+        cy.get('#email').type(usuarioFake.email);
+        cy.get('#password').type(usuarioFake.senha);
+        cy.get('#login-btn').click();
 
+        cy.contains('Email ou senha incorretos.')
+            .should('be.visible');
+    });
 
+    it('Não deve efetuar login com email aleatório e senha válida', () => {
+
+        const emailFake = faker.internet.email();
+
+        cy.get('#email').type(emailFake);
+        cy.get('#password').type('admin123');
+        cy.get('#login-btn').click();
+
+        cy.log(`Email utilizado: ${emailFake}`);
+
+        cy.contains('Email ou senha incorretos.')
+            .should('be.visible');
+    });
 
 });
