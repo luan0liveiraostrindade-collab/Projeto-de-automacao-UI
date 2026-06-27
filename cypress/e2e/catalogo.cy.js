@@ -55,7 +55,7 @@ describe('Funcionalidade: Catálogo de livros', () => {
            
         });
 
-    it.only('Deve conseguir remover o livro da cesta', () => {
+    it('Deve conseguir remover o livro da cesta', () => {
 
         cy.get(':nth-child(2) > .card > .card-body > .mt-auto > .d-grid > .btn-primary').click();
         cy.get(':nth-child(2) > .nav-link').click();
