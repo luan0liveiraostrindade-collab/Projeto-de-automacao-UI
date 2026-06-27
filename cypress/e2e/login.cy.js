@@ -2,7 +2,7 @@
 
 import { faker } from '@faker-js/faker';
 
-describe('Funcionalidade: login/ Massa de dados fake', () => {
+describe('Funcionalidade: login', () => {
 
     beforeEach(() => {
         cy.visit('login.html')
@@ -17,6 +17,10 @@ describe('Funcionalidade: login/ Massa de dados fake', () => {
         cy.contains('Painel Administrativo').should('be.visible')
     });
 
+    
+    //Caminho Feliz
+    
+    
     //Testes de erro
 
     it('Não deve efetuar login sem preencher o campo email', () => {
