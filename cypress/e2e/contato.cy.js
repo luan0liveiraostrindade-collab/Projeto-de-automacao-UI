@@ -49,7 +49,7 @@ describe('Funcionalidade: contato', () => {
 
     })
 
-    it.only('Não deve enviar efetuar login sem escrever uma mensagem', () => {
+    it('Não deve enviar efetuar login sem escrever uma mensagem', () => {
         cy.get('[name="name"]').type('Luan Oliveira');
         cy.get('[name="email"]').type('luantrindade@yahoo.com.br');
         cy.get('[name="subject"]').select('Parcerias');
